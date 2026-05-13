@@ -57,3 +57,23 @@ CREATE TABLE Freelancer (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Project Table
+-- Stores projects posted by clients.
+-- =========================================================
+
+CREATE TABLE Project (
+    project_id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(150) NOT NULL,
+    description TEXT,
+    budget DECIMAL(10,2),
+    date_posted DATE NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    client_id INT NOT NULL,
+    FOREIGN KEY (client_id) REFERENCES Client(client_id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE,
+    CHECK (budget IS NULL OR budget >= 0),
+    CHECK (status IN ('Open', 'In Progress', 'Completed', 'Cancelled'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

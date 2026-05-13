@@ -129,3 +129,23 @@ CREATE TABLE Skill (
     skill_id INT PRIMARY KEY AUTO_INCREMENT,
     skill_name VARCHAR(100) NOT NULL UNIQUE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Freelancer_Skill Table
+-- Junction table for the many-to-many relationship
+-- between Freelancer and Skill.
+-- =========================================================
+
+CREATE TABLE Freelancer_Skill (
+    freelancer_id INT NOT NULL,
+    skill_id INT NOT NULL,
+    proficiency_level VARCHAR(50) NOT NULL,
+    PRIMARY KEY (freelancer_id, skill_id),
+    FOREIGN KEY (freelancer_id) REFERENCES Freelancer(freelancer_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (skill_id) REFERENCES Skill(skill_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    CHECK (proficiency_level IN ('Beginner', 'Intermediate', 'Advanced', 'Expert'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

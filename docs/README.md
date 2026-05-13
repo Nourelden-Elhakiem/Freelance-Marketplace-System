@@ -1,20 +1,24 @@
 # Project Documentation
 
-This directory contains the official documentation and database design references for the **Freelance Marketplace Management System**.
+This directory contains the official documentation assets for the **Freelance Marketplace Management System**.
 
-It includes the full academic project report and the main database diagrams used to explain the system structure, relationships, and implementation design.
+It provides the complete academic project report and the database design diagrams used to describe the system structure, relationships, normalization, and implementation design.
 
 ---
 
-## Full Project Report
+## Project Report
 
-The complete project report is included in this directory.
+The full academic database report is available in this directory.
 
-**Report file:**
+<p align="center">
+  <a href="Freelance_Marketplace_System_Report.pdf">
+    <strong>View Full Project Report</strong>
+  </a>
+</p>
 
-Freelance_Marketplace_System_Report.pdf
+**Report file:** `Freelance_Marketplace_System_Report.pdf`
 
-The report covers:
+The report includes:
 
 - Project overview
 - Problem statement and system benefits
@@ -34,47 +38,55 @@ The report covers:
 
 The following diagrams provide visual documentation of the database structure and relationships used in the project.
 
+Each image can be opened in full size by clicking on it.
+
 ---
 
 ### 1. Database Schema
 
-**File path:**
-
-diagrams/schema.png
+**File path:** `diagrams/schema.png`
 
 This diagram shows the final relational database schema, including tables, attributes, primary keys, foreign keys, and relationships between entities.
 
-![Database Schema](diagrams/schema.png)
+<p align="center">
+  <a href="diagrams/schema.png">
+    <img src="diagrams/schema.png" alt="Database Schema" width="90%">
+  </a>
+</p>
 
 ---
 
 ### 2. Entity Relationship Diagram (ERD)
 
-**File path:**
-
-diagrams/ERD.png
+**File path:** `diagrams/ERD.png`
 
 This diagram presents the conceptual entity relationship model of the Freelance Marketplace Management System.
 
-![Entity Relationship Diagram](diagrams/ERD.png)
+<p align="center">
+  <a href="diagrams/ERD.png">
+    <img src="diagrams/ERD.png" alt="Entity Relationship Diagram" width="90%">
+  </a>
+</p>
 
 ---
 
 ### 3. Enhanced Entity Relationship Diagram (EERD)
 
-**File path:**
-
-diagrams/EERD.png
+**File path:** `diagrams/EERD.png`
 
 This diagram extends the ERD by representing enhanced modeling concepts, including specialization and system-level relationships.
 
-![Enhanced Entity Relationship Diagram](diagrams/EERD.png)
+<p align="center">
+  <a href="diagrams/EERD.png">
+    <img src="diagrams/EERD.png" alt="Enhanced Entity Relationship Diagram" width="90%">
+  </a>
+</p>
 
 ---
 
 ## Documentation Structure
 
-```text
+<pre>
 docs/
 ├── README.md
 ├── Freelance_Marketplace_System_Report.pdf
@@ -82,5 +94,6 @@ docs/
     ├── schema.png
     ├── ERD.png
     └── EERD.png
-```
+</pre>
+
 ---

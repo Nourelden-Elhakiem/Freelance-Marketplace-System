@@ -74,12 +74,13 @@ This diagram extends the ERD by representing enhanced modeling concepts, includi
 
 ## Documentation Structure
 
+```text
 docs/
-  README.md
-  Freelance_Marketplace_System_Report.pdf
-  diagrams/
-    schema.png
-    ERD.png
-    EERD.png
+├── README.md
+├── Freelance_Marketplace_System_Report.pdf
+└── diagrams/
+    ├── schema.png
+    ├── ERD.png
+    └── EERD.png
 
 ---

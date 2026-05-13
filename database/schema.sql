@@ -15,3 +15,18 @@ DROP TABLE IF EXISTS Client;
 DROP TABLE IF EXISTS `User`;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+-- =========================================================
+-- User Table
+-- Stores common account information for all system users.
+-- =========================================================
+
+CREATE TABLE `User` (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    registration_date DATE NOT NULL,
+    user_type VARCHAR(20) NOT NULL,
+    CHECK (user_type IN ('Client', 'Freelancer'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

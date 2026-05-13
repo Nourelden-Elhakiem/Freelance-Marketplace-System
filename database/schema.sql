@@ -119,3 +119,13 @@ CREATE TABLE Contract (
     CHECK (end_date IS NULL OR end_date >= start_date),
     CHECK (status IN ('Active', 'Completed', 'Cancelled'))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Skill Table
+-- Stores available freelancer skills.
+-- =========================================================
+
+CREATE TABLE Skill (
+    skill_id INT PRIMARY KEY AUTO_INCREMENT,
+    skill_name VARCHAR(100) NOT NULL UNIQUE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

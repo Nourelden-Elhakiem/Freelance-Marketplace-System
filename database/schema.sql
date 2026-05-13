@@ -77,3 +77,26 @@ CREATE TABLE Project (
     CHECK (budget IS NULL OR budget >= 0),
     CHECK (status IN ('Open', 'In Progress', 'Completed', 'Cancelled'))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Proposal Table
+-- Stores proposals submitted by freelancers for projects.
+-- =========================================================
+
+CREATE TABLE Proposal (
+    proposal_id INT PRIMARY KEY AUTO_INCREMENT,
+    cover_letter TEXT,
+    bid_amount DECIMAL(10,2) NOT NULL,
+    date_submitted DATE NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    freelancer_id INT NOT NULL,
+    project_id INT NOT NULL,
+    FOREIGN KEY (freelancer_id) REFERENCES Freelancer(freelancer_id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE,
+    FOREIGN KEY (project_id) REFERENCES Project(project_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    CHECK (bid_amount >= 0),
+    CHECK (status IN ('Pending', 'Accepted', 'Rejected'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

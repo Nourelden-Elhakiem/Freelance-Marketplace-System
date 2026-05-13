@@ -30,3 +30,16 @@ CREATE TABLE `User` (
     user_type VARCHAR(20) NOT NULL,
     CHECK (user_type IN ('Client', 'Freelancer'))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Client Table
+-- Represents clients who post projects.
+-- client_id is also a foreign key referencing User(user_id).
+-- =========================================================
+
+CREATE TABLE Client (
+    client_id INT PRIMARY KEY,
+    FOREIGN KEY (client_id) REFERENCES `User`(user_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

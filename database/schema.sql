@@ -43,3 +43,17 @@ CREATE TABLE Client (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Freelancer Table
+-- Represents freelancers who submit proposals.
+-- freelancer_id is also a foreign key referencing User(user_id).
+-- =========================================================
+
+CREATE TABLE Freelancer (
+    freelancer_id INT PRIMARY KEY,
+    bio TEXT,
+    FOREIGN KEY (freelancer_id) REFERENCES `User`(user_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

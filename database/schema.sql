@@ -100,3 +100,22 @@ CREATE TABLE Proposal (
     CHECK (bid_amount >= 0),
     CHECK (status IN ('Pending', 'Accepted', 'Rejected'))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Contract Table
+-- Stores contracts created from accepted proposals.
+-- Each proposal can create only one contract.
+-- =========================================================
+
+CREATE TABLE Contract (
+    contract_id INT PRIMARY KEY AUTO_INCREMENT,
+    start_date DATE NOT NULL,
+    end_date DATE,
+    status VARCHAR(50) NOT NULL,
+    proposal_id INT NOT NULL UNIQUE,
+    FOREIGN KEY (proposal_id) REFERENCES Proposal(proposal_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    CHECK (end_date IS NULL OR end_date >= start_date),
+    CHECK (status IN ('Active', 'Completed', 'Cancelled'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

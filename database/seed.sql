@@ -69,3 +69,14 @@ INSERT INTO Proposal (proposal_id, cover_letter, bid_amount, date_submitted, sta
 
 INSERT INTO Contract (contract_id, start_date, end_date, status, proposal_id) VALUES
 (1, '2026-04-08', '2026-04-25', 'Active', 1);
+-- =========================================================
+-- Sample Skills
+-- =========================================================
+
+INSERT INTO Skill (skill_id, skill_name) VALUES
+(1, 'PHP'),
+(2, 'MySQL'),
+(3, 'HTML'),
+(4, 'CSS'),
+(5, 'Graphic Design'),
+(6, 'Content Writing');

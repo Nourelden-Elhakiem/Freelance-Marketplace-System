@@ -63,3 +63,9 @@ INSERT INTO Proposal (proposal_id, cover_letter, bid_amount, date_submitted, sta
 (3, 'I can write clear and SEO-friendly product descriptions for your catalog.', 280.00, '2026-04-05', 'Pending', 5, 3),
 (4, 'I can build a simple and elegant photographer portfolio with gallery sections.', 650.00, '2026-04-07', 'Rejected', 3, 4),
 (5, 'I can create a modern portfolio layout with attention to design details.', 680.00, '2026-04-07', 'Pending', 4, 4);
+-- =========================================================
+-- Sample Contracts
+-- =========================================================
+
+INSERT INTO Contract (contract_id, start_date, end_date, status, proposal_id) VALUES
+(1, '2026-04-08', '2026-04-25', 'Active', 1);

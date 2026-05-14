@@ -53,3 +53,13 @@ INSERT INTO Project (project_id, title, description, budget, date_posted, status
 (2, 'Logo and Brand Kit', 'Looking for a freelancer to design a logo and simple brand identity package.', 450.00, '2026-04-03', 'In Progress', 2),
 (3, 'Product Description Writing', 'Need engaging product descriptions for an online store with 50 items.', 300.00, '2026-04-04', 'Open', 6),
 (4, 'Portfolio Website', 'Create a personal portfolio website for a photographer using simple PHP pages.', 700.00, '2026-04-06', 'Completed', 1);
+-- =========================================================
+-- Sample Proposals
+-- =========================================================
+
+INSERT INTO Proposal (proposal_id, cover_letter, bid_amount, date_submitted, status, freelancer_id, project_id) VALUES
+(1, 'I can redesign your business website with a clean structure and responsive pages.', 1100.00, '2026-04-02', 'Accepted', 3, 1),
+(2, 'I have strong experience in logo design and can deliver a full brand kit quickly.', 420.00, '2026-04-04', 'Pending', 4, 2),
+(3, 'I can write clear and SEO-friendly product descriptions for your catalog.', 280.00, '2026-04-05', 'Pending', 5, 3),
+(4, 'I can build a simple and elegant photographer portfolio with gallery sections.', 650.00, '2026-04-07', 'Rejected', 3, 4),
+(5, 'I can create a modern portfolio layout with attention to design details.', 680.00, '2026-04-07', 'Pending', 4, 4);

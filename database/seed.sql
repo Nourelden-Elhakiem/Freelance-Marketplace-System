@@ -80,3 +80,17 @@ INSERT INTO Skill (skill_id, skill_name) VALUES
 (4, 'CSS'),
 (5, 'Graphic Design'),
 (6, 'Content Writing');
+-- =========================================================
+-- Sample Freelancer Skill Assignments
+-- =========================================================
+
+INSERT INTO Freelancer_Skill (freelancer_id, skill_id, proficiency_level) VALUES
+(3, 1, 'Advanced'),
+(3, 2, 'Advanced'),
+(3, 3, 'Advanced'),
+(3, 4, 'Intermediate'),
+(4, 3, 'Intermediate'),
+(4, 4, 'Advanced'),
+(4, 5, 'Advanced'),
+(5, 6, 'Advanced'),
+(5, 3, 'Beginner');

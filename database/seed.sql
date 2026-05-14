@@ -25,3 +25,11 @@ INSERT INTO `User` (user_id, name, email, password, registration_date, user_type
 (4, 'Laila Samir', 'laila.freelancer@example.com', 'free123', '2026-03-06', 'Freelancer'),
 (5, 'Mona Adel', 'mona.freelancer@example.com', 'free123', '2026-03-08', 'Freelancer'),
 (6, 'Karim Nabil', 'karim.client@example.com', 'client123', '2026-03-10', 'Client');
+-- =========================================================
+-- Sample Clients
+-- =========================================================
+
+INSERT INTO Client (client_id) VALUES
+(1),
+(2),
+(6);

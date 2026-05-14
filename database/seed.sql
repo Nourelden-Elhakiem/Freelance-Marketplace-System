@@ -33,3 +33,11 @@ INSERT INTO Client (client_id) VALUES
 (1),
 (2),
 (6);
+-- =========================================================
+-- Sample Freelancers
+-- =========================================================
+
+INSERT INTO Freelancer (freelancer_id, bio) VALUES
+(3, 'Full-stack web developer with experience in PHP, MySQL, and responsive website design.'),
+(4, 'Graphic designer and front-end freelancer focused on branding, UI layouts, and landing pages.'),
+(5, 'Content writer and virtual assistant with experience in product descriptions and admin support.');

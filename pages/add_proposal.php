@@ -1,0 +1,72 @@
+<?php
+require_once __DIR__ . '/../config/db.php';
+$isEdit = basename($_SERVER['SCRIPT_NAME']) === 'edit_proposal.php';
+$pageTitle = ($isEdit ? 'Edit Proposal' : 'Add Proposal') . ' | Freelance Marketplace System';
+$id = intval($_GET['id'] ?? 0); $successMessage=''; $errorMessage='';
+$proposal=['cover_letter'=>'','bid_amount'=>'','date_submitted'=>'','status'=>'Pending','freelancer_id'=>'','project_id'=>''];
+if($isEdit){ if($id<=0){header('Location: proposals.php?error=Invalid proposal ID.'); exit;} $stmt=$conn->prepare("SELECT * FROM Proposal WHERE proposal_id = ?"); $stmt->bind_param('i',$id); $stmt->execute(); $proposal=$stmt->get_result()->fetch_assoc(); $stmt->close(); if(!$proposal){header('Location: proposals.php?error=Proposal not found.'); exit;} }
+if($_SERVER['REQUEST_METHOD']==='POST'){ $coverLetter=trim($_POST['cover_letter']??''); $bidAmount=trim($_POST['bid_amount']??''); $dateSubmitted=trim($_POST['date_submitted']??''); $status=trim($_POST['status']??''); $freelancerId=trim($_POST['freelancer_id']??''); $projectId=trim($_POST['project_id']??''); if($bidAmount===''||$dateSubmitted===''||$status===''||$freelancerId===''||$projectId===''){$errorMessage='Please fill in all required fields.';} else { if($isEdit){$stmt=$conn->prepare("UPDATE Proposal SET cover_letter = ?, bid_amount = ?, date_submitted = ?, status = ?, freelancer_id = ?, project_id = ? WHERE proposal_id = ?"); $stmt->bind_param('sdssiii',$coverLetter,$bidAmount,$dateSubmitted,$status,$freelancerId,$projectId,$id);} else {$stmt=$conn->prepare('INSERT INTO Proposal (cover_letter, bid_amount, date_submitted, status, freelancer_id, project_id) VALUES (?, ?, ?, ?, ?, ?)'); $stmt->bind_param('sdssii',$coverLetter,$bidAmount,$dateSubmitted,$status,$freelancerId,$projectId);} if($stmt->execute()){$successMessage=$isEdit?'Proposal updated successfully.':'Proposal added successfully (ID: '.$conn->insert_id.').'; $proposal=['cover_letter'=>$coverLetter,'bid_amount'=>$bidAmount,'date_submitted'=>$dateSubmitted,'status'=>$status,'freelancer_id'=>$freelancerId,'project_id'=>$projectId];} else {$errorMessage=$isEdit?'Unable to update proposal.':'Unable to add proposal. Please check the freelancer and project selection.';} $stmt->close(); }}
+$freelancers=$conn->query("SELECT f.freelancer_id, u.name FROM Freelancer f INNER JOIN `User` u ON f.freelancer_id = u.user_id ORDER BY u.name"); $projects=$conn->query("SELECT project_id, title FROM Project ORDER BY title");
+include __DIR__ . '/../includes/header.php';
+include __DIR__ . '/../includes/navbar.php';
+?>
+
+<section class="form-card sr-hidden">
+    <span class="eyebrow"><i class="lucide-<?php echo $isEdit?'pencil':'plus-circle'; ?>"></i> <?php echo $isEdit?'Edit Record':'New Record'; ?></span>
+    <h2 class="page-title"><?php echo $isEdit?'Edit Proposal #'.$id:'Add New Proposal'; ?></h2>
+    <p class="page-intro"><?php echo $isEdit?'Update proposal information.':'Insert a proposal linked to a freelancer and a project.'; ?></p>
+
+    <?php if($successMessage!==''):?><div class="message success"><i class="lucide-check-circle"></i> <?php echo htmlspecialchars($successMessage); ?></div><?php endif;?>
+    <?php if($errorMessage!==''):?><div class="message error"><i class="lucide-alert-circle"></i> <?php echo htmlspecialchars($errorMessage); ?></div><?php endif;?>
+
+    <form method="POST" action="">
+        <div class="form-row">
+            <div>
+                <label for="freelancer_id"><i class="lucide-user-check"></i> Freelancer *</label>
+                <select id="freelancer_id" name="freelancer_id" required>
+                    <option value="">Select a freelancer</option>
+                    <?php while($f=$freelancers->fetch_assoc()):?>
+                        <option value="<?php echo $f['freelancer_id']; ?>" <?php echo ($f['freelancer_id']==$proposal['freelancer_id'])?'selected':''; ?>><?php echo htmlspecialchars($f['name']); ?> (ID: <?php echo $f['freelancer_id']; ?>)</option>
+                    <?php endwhile;?>
+                </select>
+            </div>
+            <div>
+                <label for="project_id"><i class="lucide-folder-kanban"></i> Project *</label>
+                <select id="project_id" name="project_id" required>
+                    <option value="">Select a project</option>
+                    <?php while($p=$projects->fetch_assoc()):?>
+                        <option value="<?php echo $p['project_id']; ?>" <?php echo ($p['project_id']==$proposal['project_id'])?'selected':''; ?>><?php echo htmlspecialchars($p['title']); ?> (ID: <?php echo $p['project_id']; ?>)</option>
+                    <?php endwhile;?>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div>
+                <label for="bid_amount"><i class="lucide-dollar-sign"></i> Bid Amount *</label>
+                <input type="number" step="0.01" id="bid_amount" name="bid_amount" required value="<?php echo htmlspecialchars($proposal['bid_amount']); ?>" placeholder="0.00">
+            </div>
+            <div>
+                <label for="date_submitted"><i class="lucide-calendar"></i> Date Submitted *</label>
+                <input type="date" id="date_submitted" name="date_submitted" required value="<?php echo htmlspecialchars($proposal['date_submitted']); ?>">
+            </div>
+        </div>
+        <div>
+            <label for="status"><i class="lucide-flag"></i> Status *</label>
+            <select id="status" name="status" required>
+                <?php foreach(['Pending','Accepted','Rejected'] as $st):?>
+                    <option value="<?php echo $st; ?>" <?php echo $proposal['status']===$st?'selected':''; ?>><?php echo $st; ?></option>
+                <?php endforeach;?>
+            </select>
+        </div>
+        <div>
+            <label for="cover_letter"><i class="lucide-align-left"></i> Cover Letter</label>
+            <textarea id="cover_letter" name="cover_letter" placeholder="Enter a cover letter (optional)"><?php echo htmlspecialchars($proposal['cover_letter'] ?? ''); ?></textarea>
+        </div>
+        <div class="form-actions">
+            <button type="submit"><i class="lucide-check"></i> <?php echo $isEdit?'Update Proposal':'Add Proposal'; ?></button>
+            <a class="btn btn-secondary" href="<?php echo $basePath; ?>/pages/proposals.php"><i class="lucide-arrow-left"></i> Cancel</a>
+        </div>
+    </form>
+</section>
+
+<?php include __DIR__ . '/../includes/footer.php'; $conn->close(); ?>

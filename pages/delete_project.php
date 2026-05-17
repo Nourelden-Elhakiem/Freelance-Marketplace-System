@@ -1,0 +1,4 @@
+<?php
+require_once __DIR__ . '/../config/db.php';
+$id=intval($_GET['id']??0); if($id<=0){header('Location: projects.php?error=Invalid project ID.'); exit;} $res=$conn->prepare("SELECT proposal_id FROM Proposal WHERE project_id = ?"); $res->bind_param('i',$id); $res->execute(); $props=$res->get_result(); while($r=$props->fetch_assoc()){ $dc=$conn->prepare("DELETE FROM Contract WHERE proposal_id = ?"); $dc->bind_param('i',$r['proposal_id']); $dc->execute(); $dc->close(); } $res->close(); $dp=$conn->prepare("DELETE FROM Proposal WHERE project_id = ?"); $dp->bind_param('i',$id); $dp->execute(); $dp->close(); $stmt=$conn->prepare("DELETE FROM Project WHERE project_id = ?"); $stmt->bind_param('i',$id); $stmt->execute(); $stmt->close(); $conn->close(); header('Location: projects.php?success=Project and all related proposals/contracts deleted successfully.'); exit;
+?>

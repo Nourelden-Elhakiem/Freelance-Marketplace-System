@@ -151,4 +151,20 @@ include __DIR__ . '/../includes/navbar.php';
         </figure>
     </div>
 </section>
+<div class="image-lightbox" id="diagramLightbox" hidden>
+    <div class="image-lightbox__backdrop" data-lightbox-close></div>
+    <div class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="diagramLightboxTitle">
+        <div class="image-lightbox__header">
+            <div>
+                <p class="image-lightbox__label">Diagram Preview</p>
+                <h3 id="diagramLightboxTitle">Project Diagram</h3>
+            </div>
+            <button type="button" class="image-lightbox__close" data-lightbox-close aria-label="Close image preview">&times;</button>
+        </div>
+        <div class="image-lightbox__figure">
+            <img id="diagramLightboxImage" src="" alt="">
+        </div>
+        <p class="image-lightbox__caption" id="diagramLightboxCaption"></p>
+    </div>
+</div>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

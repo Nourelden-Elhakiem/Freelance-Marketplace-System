@@ -116,6 +116,17 @@ include __DIR__ . '/../includes/navbar.php';
     <h2 class="page-title">Database Drawings</h2>
     <p class="page-intro">Click any diagram to open a large, readable preview of the project documentation.</p>
     <div class="diagram-grid">
+        <figure class="diagram-card" tabindex="0" role="button" aria-label="Open Database Schema preview" data-diagram-src="<?php echo $basePath; ?>/assets/images/diagrams/schema.png" data-diagram-title="Database Schema" data-diagram-caption="Physical schema showing table structures, keys, and relationships.">
+            <div class="diagram-trigger-media">
+                <img src="<?php echo $basePath; ?>/assets/images/diagrams/schema.png" alt="Database Schema">
+                <span class="diagram-zoom-badge">View Large</span>
+            </div>
+            <figcaption>
+                <span>Schema</span>
+                <strong>Database Schema</strong>
+                <p>Physical table structure, keys, and relationships.</p>
+            </figcaption>
+        </figure>
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

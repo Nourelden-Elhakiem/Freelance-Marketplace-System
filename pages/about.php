@@ -89,6 +89,16 @@ include __DIR__ . '/../includes/navbar.php';
             <h3>User Management</h3>
             <p>Client and freelancer creation through the shared User table.</p>
         </div>
+        <div class="module-card">
+            <div class="module-icon module-icon-projects"><?php echo render_local_icon('projects', 'module-svg', 'Projects'); ?></div>
+            <h3>Project Workflow</h3>
+            <p>Projects connect clients to proposals and contracts.</p>
+        </div>
+        <div class="module-card">
+            <div class="module-icon module-icon-proposals"><?php echo render_local_icon('proposals', 'module-svg', 'Proposals'); ?></div>
+            <h3>Proposal Tracking</h3>
+            <p>Freelancer bids demonstrate the project-to-proposal relationship.</p>
+        </div>
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

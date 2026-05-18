@@ -99,6 +99,16 @@ include __DIR__ . '/../includes/navbar.php';
             <h3>Proposal Tracking</h3>
             <p>Freelancer bids demonstrate the project-to-proposal relationship.</p>
         </div>
+        <div class="module-card">
+            <div class="module-icon module-icon-contracts"><?php echo render_local_icon('contracts', 'module-svg', 'Contracts'); ?></div>
+            <h3>Contracts</h3>
+            <p>Accepted proposals can lead to contract records.</p>
+        </div>
+        <div class="module-card">
+            <div class="module-icon module-icon-skills"><?php echo render_local_icon('skills', 'module-svg', 'Skills'); ?></div>
+            <h3>Skills</h3>
+            <p>Freelancer skill assignments demonstrate a junction table.</p>
+        </div>
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

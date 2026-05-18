@@ -127,6 +127,17 @@ include __DIR__ . '/../includes/navbar.php';
                 <p>Physical table structure, keys, and relationships.</p>
             </figcaption>
         </figure>
+        <figure class="diagram-card" tabindex="0" role="button" aria-label="Open ERD preview" data-diagram-src="<?php echo $basePath; ?>/assets/images/diagrams/ERD.png" data-diagram-title="ERD" data-diagram-caption="Conceptual relationship model for the marketplace workflow.">
+            <div class="diagram-trigger-media">
+                <img src="<?php echo $basePath; ?>/assets/images/diagrams/ERD.png" alt="Entity Relationship Diagram">
+                <span class="diagram-zoom-badge">View Large</span>
+            </div>
+            <figcaption>
+                <span>ERD</span>
+                <strong>Entity Relationship Diagram</strong>
+                <p>Conceptual view of entities and relationships.</p>
+            </figcaption>
+        </figure>
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

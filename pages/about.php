@@ -138,6 +138,17 @@ include __DIR__ . '/../includes/navbar.php';
                 <p>Conceptual view of entities and relationships.</p>
             </figcaption>
         </figure>
+        <figure class="diagram-card" tabindex="0" role="button" aria-label="Open EERD preview" data-diagram-src="<?php echo $basePath; ?>/assets/images/diagrams/EERD.png" data-diagram-title="EERD" data-diagram-caption="Enhanced model showing specialization and relationship detail.">
+            <div class="diagram-trigger-media">
+                <img src="<?php echo $basePath; ?>/assets/images/diagrams/EERD.png" alt="Enhanced Entity Relationship Diagram">
+                <span class="diagram-zoom-badge">View Large</span>
+            </div>
+            <figcaption>
+                <span>EERD</span>
+                <strong>Enhanced Entity Relationship Diagram</strong>
+                <p>Enhanced model with specialization details.</p>
+            </figcaption>
+        </figure>
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

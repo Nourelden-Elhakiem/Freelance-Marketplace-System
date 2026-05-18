@@ -40,4 +40,14 @@ include __DIR__ . '/../includes/navbar.php';
         </div>
     </aside>
 </section>
+<section class="info-card report-card reveal">
+    <div>
+        <span class="eyebrow"><i class="lucide-file-text"></i> Project Report</span>
+        <h2 class="page-title">Full Documentation Report</h2>
+        <p class="page-intro">The report covers database design, ERD/EERD diagrams, normalization, SQL implementation, and project documentation.</p>
+    </div>
+    <a class="btn report-btn" href="https://github.com/Nourelden-Elhakiem/Freelance-Marketplace-System/blob/main/docs/Freelance_Marketplace_System_Report.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="lucide-file-text"></i> View Full Project Report
+    </a>
+</section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

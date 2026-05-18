@@ -1,8 +1,9 @@
-﻿<?php
+<?php
 $pageTitle = 'About | Freelance Marketplace System';
 include __DIR__ . '/../includes/header.php';
 include __DIR__ . '/../includes/navbar.php';
 ?>
+
 <section class="section-card about-hero reveal">
     <div class="about-hero-copy">
         <div class="project-brand-lockup project-brand-logo">
@@ -40,6 +41,7 @@ include __DIR__ . '/../includes/navbar.php';
         </div>
     </aside>
 </section>
+
 <section class="info-card report-card reveal">
     <div>
         <span class="eyebrow"><i class="lucide-file-text"></i> Project Report</span>
@@ -50,6 +52,7 @@ include __DIR__ . '/../includes/navbar.php';
         <i class="lucide-file-text"></i> View Full Project Report
     </a>
 </section>
+
 <div class="two-column">
     <section class="info-card reveal">
         <span class="eyebrow"><i class="lucide-target"></i> Purpose</span>
@@ -63,6 +66,7 @@ include __DIR__ . '/../includes/navbar.php';
             <li>CRUD pages allow the database to be tested directly from the website.</li>
         </ul>
     </section>
+
     <section class="info-card reveal">
         <span class="eyebrow"><i class="lucide-database"></i> Database Focus</span>
         <h2 class="page-title">Relational Coverage</h2>
@@ -74,6 +78,7 @@ include __DIR__ . '/../includes/navbar.php';
         </div>
     </section>
 </div>
+
 <section class="section-card reveal">
     <span class="eyebrow"><i class="lucide-layers-3"></i> System Modules</span>
     <h2 class="page-title">Main Functional Areas</h2>
@@ -111,6 +116,7 @@ include __DIR__ . '/../includes/navbar.php';
         </div>
     </div>
 </section>
+
 <section class="section-card reveal">
     <span class="eyebrow"><i class="lucide-image"></i> Project Diagrams</span>
     <h2 class="page-title">Database Drawings</h2>
@@ -127,6 +133,7 @@ include __DIR__ . '/../includes/navbar.php';
                 <p>Physical table structure, keys, and relationships.</p>
             </figcaption>
         </figure>
+
         <figure class="diagram-card" tabindex="0" role="button" aria-label="Open ERD preview" data-diagram-src="<?php echo $basePath; ?>/assets/images/diagrams/ERD.png" data-diagram-title="ERD" data-diagram-caption="Conceptual relationship model for the marketplace workflow.">
             <div class="diagram-trigger-media">
                 <img src="<?php echo $basePath; ?>/assets/images/diagrams/ERD.png" alt="Entity Relationship Diagram">
@@ -138,6 +145,7 @@ include __DIR__ . '/../includes/navbar.php';
                 <p>Conceptual view of entities and relationships.</p>
             </figcaption>
         </figure>
+
         <figure class="diagram-card" tabindex="0" role="button" aria-label="Open EERD preview" data-diagram-src="<?php echo $basePath; ?>/assets/images/diagrams/EERD.png" data-diagram-title="EERD" data-diagram-caption="Enhanced model showing specialization and relationship detail.">
             <div class="diagram-trigger-media">
                 <img src="<?php echo $basePath; ?>/assets/images/diagrams/EERD.png" alt="Enhanced Entity Relationship Diagram">
@@ -151,6 +159,7 @@ include __DIR__ . '/../includes/navbar.php';
         </figure>
     </div>
 </section>
+
 <div class="image-lightbox" id="diagramLightbox" hidden>
     <div class="image-lightbox__backdrop" data-lightbox-close></div>
     <div class="image-lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="diagramLightboxTitle">
@@ -167,4 +176,5 @@ include __DIR__ . '/../includes/navbar.php';
         <p class="image-lightbox__caption" id="diagramLightboxCaption"></p>
     </div>
 </div>
+
 <?php include __DIR__ . '/../includes/footer.php'; ?>

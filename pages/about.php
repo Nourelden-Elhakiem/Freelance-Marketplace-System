@@ -26,6 +26,16 @@ include __DIR__ . '/../includes/navbar.php';
                 <h3>Nourelden Elhakiem</h3>
                 <strong class="developer-title">AI Engineer | Data Scientist</strong>
                 <p>Designed and developed this project as a portfolio-ready database management system demonstrating PHP, MySQL, CRUD workflows, relational database design, ERD/EERD documentation, and deployment readiness.</p>
+                <div class="social-links">
+                    <a class="social-link" href="https://www.linkedin.com/in/NoureldenElhakiem" target="_blank" rel="noopener noreferrer">
+                        <?php echo render_local_icon('linkedin', 'social-svg', 'LinkedIn'); ?>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a class="social-link" href="https://github.com/Nourelden-Elhakiem" target="_blank" rel="noopener noreferrer">
+                        <?php echo render_local_icon('github', 'social-svg', 'GitHub'); ?>
+                        <span>GitHub</span>
+                    </a>
+                </div>
             </div>
         </div>
     </aside>

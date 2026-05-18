@@ -111,4 +111,11 @@ include __DIR__ . '/../includes/navbar.php';
         </div>
     </div>
 </section>
+<section class="section-card reveal">
+    <span class="eyebrow"><i class="lucide-image"></i> Project Diagrams</span>
+    <h2 class="page-title">Database Drawings</h2>
+    <p class="page-intro">Click any diagram to open a large, readable preview of the project documentation.</p>
+    <div class="diagram-grid">
+    </div>
+</section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

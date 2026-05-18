@@ -74,4 +74,11 @@ include __DIR__ . '/../includes/navbar.php';
         </div>
     </section>
 </div>
+<section class="section-card reveal">
+    <span class="eyebrow"><i class="lucide-layers-3"></i> System Modules</span>
+    <h2 class="page-title">Main Functional Areas</h2>
+    <p class="page-intro">Each module maps to database tables and routes that support browsing, creation, editing, and deletion.</p>
+    <div class="module-grid">
+    </div>
+</section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

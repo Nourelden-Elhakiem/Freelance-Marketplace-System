@@ -14,5 +14,20 @@ include __DIR__ . '/../includes/navbar.php';
         <p class="page-intro">A professional PHP and MySQL web application that models a simplified freelance marketplace through clean relational data design, CRUD workflows, and a polished presentation layer.</p>
         <p class="muted-text" style="margin-top:14px;">The system focuses on clients, freelancers, projects, proposals, contracts, skills, and the junction-table relationship between freelancers and skills.</p>
     </div>
+
+    <aside class="developer-card">
+        <div class="identity-stage" data-identity-stage aria-hidden="true">
+            <span class="identity-full-name" data-identity-full>Nourelden Hany Elhakiem</span>
+        </div>
+        <div class="developer-identity" data-identity-final>
+            <div class="developer-avatar identity-badge" data-identity-badge><span>NHE</span></div>
+            <div class="developer-content">
+                <span class="developer-label">Project Author</span>
+                <h3>Nourelden Elhakiem</h3>
+                <strong class="developer-title">AI Engineer | Data Scientist</strong>
+                <p>Designed and developed this project as a portfolio-ready database management system demonstrating PHP, MySQL, CRUD workflows, relational database design, ERD/EERD documentation, and deployment readiness.</p>
+            </div>
+        </div>
+    </aside>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

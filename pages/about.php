@@ -79,6 +79,16 @@ include __DIR__ . '/../includes/navbar.php';
     <h2 class="page-title">Main Functional Areas</h2>
     <p class="page-intro">Each module maps to database tables and routes that support browsing, creation, editing, and deletion.</p>
     <div class="module-grid">
+        <div class="module-card">
+            <div class="module-icon module-icon-dashboard"><?php echo render_local_icon('dashboard', 'module-svg', 'Dashboard'); ?></div>
+            <h3>Dashboard</h3>
+            <p>Statistics, recent activity, quick actions, and a professional project overview.</p>
+        </div>
+        <div class="module-card">
+            <div class="module-icon module-icon-users"><?php echo render_local_icon('users', 'module-svg', 'User Management'); ?></div>
+            <h3>User Management</h3>
+            <p>Client and freelancer creation through the shared User table.</p>
+        </div>
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

@@ -63,5 +63,15 @@ include __DIR__ . '/../includes/navbar.php';
             <li>CRUD pages allow the database to be tested directly from the website.</li>
         </ul>
     </section>
+    <section class="info-card reveal">
+        <span class="eyebrow"><i class="lucide-database"></i> Database Focus</span>
+        <h2 class="page-title">Relational Coverage</h2>
+        <div class="detail-list" style="margin-top:16px;">
+            <div class="detail-item"><span class="detail-label">Core Tables</span><span class="detail-value">User, Client, Freelancer, Project, Proposal, Contract, Skill</span></div>
+            <div class="detail-item"><span class="detail-label">Relationships</span><span class="detail-value">One-to-one, one-to-many, and many-to-many</span></div>
+            <div class="detail-item"><span class="detail-label">Backend</span><span class="detail-value">PHP, MySQL, MySQLi prepared statements</span></div>
+            <div class="detail-item"><span class="detail-label">Frontend</span><span class="detail-value">Responsive CSS, ES modules, local SVG icons, canvas hero</span></div>
+        </div>
+    </section>
 </div>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

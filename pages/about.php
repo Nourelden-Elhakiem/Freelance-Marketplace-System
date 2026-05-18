@@ -50,4 +50,18 @@ include __DIR__ . '/../includes/navbar.php';
         <i class="lucide-file-text"></i> View Full Project Report
     </a>
 </section>
+<div class="two-column">
+    <section class="info-card reveal">
+        <span class="eyebrow"><i class="lucide-target"></i> Purpose</span>
+        <h2 class="page-title">What This Project Demonstrates</h2>
+        <p class="page-intro">The project presents database concepts through a realistic marketplace workflow that is simple enough to explain and complete enough to test.</p>
+        <ul class="feature-points">
+            <li>Clients post projects with budget, status, and posting date.</li>
+            <li>Freelancers submit proposals to projects.</li>
+            <li>Accepted proposals can be converted into contracts.</li>
+            <li>Freelancers can be connected to many skills with proficiency levels.</li>
+            <li>CRUD pages allow the database to be tested directly from the website.</li>
+        </ul>
+    </section>
+</div>
 <?php include __DIR__ . '/../includes/footer.php'; ?>

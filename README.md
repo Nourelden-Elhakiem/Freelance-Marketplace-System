@@ -507,7 +507,7 @@ For production-level usage, the following improvements are recommended:
 ## Author
 
 **Nourelden Hany Elhakiem**
-Computer Engineering | AI Engineer | Data Scientist
+AI Engineer | Data Scientist
 
 This project was designed and implemented by **Nourelden Hany Elhakiem** as part of an academic database systems project, with a focus on relational database design, system implementation, and professional web-based presentation.
 

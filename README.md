@@ -1,41 +1,36 @@
 <div align="center">
 
-<img src="assets/icons/web_icon.png" alt="Freelance Marketplace System Logo" width="120" />
+<img src="assets/icons/web_icon.png" alt="Freelance Marketplace System Logo" width="200" />
+
+<br>
 
 # Freelance Marketplace Management System
 
 ### A polished PHP & MySQL database-driven web application for managing clients, freelancers, projects, proposals, contracts, and skills.
+
+<br>
 
 [![PHP](https://img.shields.io/badge/PHP-Backend-777BB4?style=for-the-badge\&logo=php\&logoColor=white)](#)
 [![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)](#)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)](#)
 [![CSS](https://img.shields.io/badge/CSS-Responsive_UI-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)](#)
 
-<div align="center">
+<br>
 
 ## Live Demo
 
-<p>
-  <a href="https://freelance-marketplace.42web.io/" target="_blank">
-    <img src="https://img.shields.io/badge/Launch%20Live%20Demo-Freelance%20Marketplace%20System-00C853?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Launch Live Demo" />
-  </a>
-</p>
+<a href="https://freelance-marketplace.42web.io/" target="_blank">
+  <img src="https://img.shields.io/badge/Launch%20Live%20Demo-Freelance%20Marketplace%20System-00C853?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Launch Live Demo" />
+</a>
 
-<p>
-  <strong>Explore the deployed version of the Freelance Marketplace Management System.</strong>
-</p>
+<br>
+<br>
 
-<p>
-  Browse the dashboard, clients, freelancers, projects, proposals, contracts, skills, and the full database-driven workflow online.
-</p>
+**Explore the deployed version of the Freelance Marketplace Management System.**
 
-### 🌐 [Open Live Website](https://freelance-marketplace.42web.io/)
+Browse the dashboard, clients, freelancers, projects, proposals, contracts, skills, and the full database-driven workflow online.
 
-</div>
-
----
-
-
+### [Open Live Website](https://freelance-marketplace.42web.io/)
 
 </div>
 
@@ -504,6 +499,7 @@ For production-level usage, the following improvements are recommended:
 * Add API endpoints for frontend/backend separation.
 
 ---
+
 ## Author
 
 **Nourelden Hany Elhakiem**
@@ -515,7 +511,6 @@ This project was designed and implemented by **Nourelden Hany Elhakiem** as part
 
 * **GitHub:** [Nourelden-Elhakiem](https://github.com/Nourelden-Elhakiem)
 * **LinkedIn:** [Nourelden Elhakiem](https://www.linkedin.com/in/noureldenelhakiem/)
-
 
 ---
 
